@@ -1,7 +1,7 @@
 ﻿using Microsoft.Owin.Hosting;
+using Serilog;
 using System;
 using System.Configuration;
-using Serilog;
 
 namespace OwinTopshelf
 {
@@ -14,7 +14,7 @@ namespace OwinTopshelf
             Log.Logger =
                 new LoggerConfiguration()
                     .ReadFrom.AppSettings()
-                    .CreateLogger();            
+                    .CreateLogger();
         }
 
         public void Start()

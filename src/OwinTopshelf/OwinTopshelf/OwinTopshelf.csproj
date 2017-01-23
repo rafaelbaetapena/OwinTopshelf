@@ -102,6 +102,10 @@
   <ItemGroup>
     <Compile Include="App.cs" />
     <Compile Include="Controllers\HelloWorldApiController.cs" />
+    <Compile Include="Controllers\TodoController.cs" />
+    <Compile Include="Models\ITodoRepository.cs" />
+    <Compile Include="Models\TodoItem.cs" />
+    <Compile Include="Models\TodoRepository.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
