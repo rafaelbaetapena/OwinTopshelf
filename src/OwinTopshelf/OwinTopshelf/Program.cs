@@ -17,7 +17,7 @@ namespace OwinTopshelf
                     s.WhenStopped(tc => tc.Stop());
                 });
                 x.RunAsLocalSystem();
-                x.SetDescription("Serviço de exemplo de Owin + Topshelf.");
+                x.SetDescription("Owin Sample Service with Topshelf and Static Files");
                 x.SetDisplayName("OwinTopshelf");
                 x.SetServiceName("OwinTopshelf");
                 x.StartAutomatically();
