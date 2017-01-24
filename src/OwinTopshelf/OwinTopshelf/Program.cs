@@ -7,7 +7,7 @@ namespace OwinTopshelf
         public static void Main()
         {
             // semple: http://www.harishrathi.com/selfhosting-webapi2-with-owin/
-            // para instalar: C:\app>OwinTopshelf.exe install start
+            // C:\app>OwinTopshelf.exe install start
             HostFactory.Run(x =>
             {
                 x.Service<App>(s =>
