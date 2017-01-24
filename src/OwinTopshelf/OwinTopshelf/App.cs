@@ -26,7 +26,7 @@ namespace OwinTopshelf
                 return;
             }
 
-            var uri = $"http://localhost:{port}";            
+            var uri = $"http://localhost:{port}";
             _webApplication = WebApp.Start<Startup>(uri);
             Log.Information($"Starting the service in {uri}");
         }
