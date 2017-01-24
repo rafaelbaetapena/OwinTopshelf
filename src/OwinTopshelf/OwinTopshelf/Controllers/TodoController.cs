@@ -7,9 +7,9 @@ namespace OwinTopshelf.Controllers
     [Route("api/[controller]")]
     public class TodoController : ApiController
     {
-        public TodoController()
+        public TodoController(ITodoRepository todoItems)
         {
-            TodoItems = new TodoRepository();
+            TodoItems = todoItems;
         }
 
         private ITodoRepository TodoItems { get; set; }

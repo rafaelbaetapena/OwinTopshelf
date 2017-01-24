@@ -6,43 +6,43 @@ namespace OwinTopshelf.Models
 {
     public class TodoRepository : ITodoRepository
     {
-        private static ConcurrentDictionary<string, TodoItem> _todos =
+        private static readonly ConcurrentDictionary<string, TodoItem> Todos =
               new ConcurrentDictionary<string, TodoItem>();
 
         public TodoRepository()
         {
-            if (_todos.Count == 0)
+            if (Todos.Count == 0)
                 Add(new TodoItem { Name = "Item1" });
         }
 
         public IEnumerable<TodoItem> GetAll()
         {
-            return _todos.Values;
+            return Todos.Values;
         }
 
         public void Add(TodoItem item)
         {
             item.Key = Guid.NewGuid().ToString();
-            _todos[item.Key] = item;
+            Todos[item.Key] = item;
         }
 
         public TodoItem Find(string key)
         {
             TodoItem item;
-            _todos.TryGetValue(key, out item);
+            Todos.TryGetValue(key, out item);
             return item;
         }
 
         public TodoItem Remove(string key)
         {
             TodoItem item;
-            _todos.TryRemove(key, out item);
+            Todos.TryRemove(key, out item);
             return item;
         }
 
         public void Update(TodoItem item)
         {
-            _todos[item.Key] = item;
+            Todos[item.Key] = item;
         }
     }
 }
