@@ -11,8 +11,7 @@ namespace OwinTopshelf.Models
 
         public TodoRepository()
         {
-            if (Todos.Count == 0)
-                Add(new TodoItem { Name = "Item1" });
+            Add(new TodoItem { Name = "Item1" });
         }
 
         public IEnumerable<TodoItem> GetAll()

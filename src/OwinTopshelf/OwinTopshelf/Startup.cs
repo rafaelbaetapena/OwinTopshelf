@@ -1,11 +1,11 @@
-﻿using System.Reflection;
-using System.Web.Http;
-using Autofac;
+﻿using Autofac;
 using Autofac.Integration.WebApi;
 using Microsoft.Owin.FileSystems;
 using Microsoft.Owin.StaticFiles;
 using Owin;
 using OwinTopshelf.Models;
+using System.Reflection;
+using System.Web.Http;
 
 namespace OwinTopshelf
 {
@@ -21,7 +21,7 @@ namespace OwinTopshelf
             // Configuration for Autofac
             builder.RegisterApiControllers(Assembly.GetExecutingAssembly());
 
-            builder.Register(c => new TodoRepository()).As<ITodoRepository>().InstancePerRequest();
+            builder.Register(c => new TodoRepository()).As<ITodoRepository>().SingleInstance();
 
             var container = builder.Build();
             config.DependencyResolver = new AutofacWebApiDependencyResolver(container);
