@@ -130,7 +130,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.cs" />
-    <Compile Include="Controllers\HelloWorldApiController.cs" />
+    <Compile Include="Controllers\HelloWorldController.cs" />
     <Compile Include="Controllers\TodoController.cs" />
     <Compile Include="Models\ITodoRepository.cs" />
     <Compile Include="Models\TodoItem.cs" />

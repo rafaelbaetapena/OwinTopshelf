@@ -2,13 +2,13 @@
 
 namespace OwinTopshelf.Controllers
 {
-    [Route("api/[controller]")]
-    public class HelloWorldApiController : ApiController
+    [Route("api/[controller]")]    
+    public class HelloWorldController : ApiController
     {
         [HttpGet]
         public string Get()
         {
-            return "Hello World";
+            return "Hello World v1";
         }
     }
 }
