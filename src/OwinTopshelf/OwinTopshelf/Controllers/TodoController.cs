@@ -4,7 +4,7 @@ using System.Web.Http;
 
 namespace OwinTopshelf.Controllers
 {
-    [Route("api/[controller]")]
+    [RoutePrefix("api/todo")]
     public class TodoController : ApiController
     {
         public TodoController(ITodoRepository todoItems)
@@ -40,7 +40,7 @@ namespace OwinTopshelf.Controllers
                 return BadRequest();
             }
             TodoItems.Add(item);
-            return CreatedAtRoute("DefaultApi", new { id = item.Key }, item);
+            return CreatedAtRoute("GetTodo", new { id = item.Key }, item);
         }
 
         [HttpPut]

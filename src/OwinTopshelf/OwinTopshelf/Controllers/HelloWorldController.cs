@@ -2,7 +2,7 @@
 
 namespace OwinTopshelf.Controllers
 {
-    [Route("api/[controller]")]    
+    [RoutePrefix("api/helloworld")]    
     public class HelloWorldController : ApiController
     {
         [HttpGet]

@@ -6,6 +6,7 @@ namespace OwinTopshelf
     {
         public static HttpConfiguration Register(HttpConfiguration config)
         {
+            config.MapHttpAttributeRoutes();
             config.Routes.MapHttpRoute("DefaultApi",
                 "api/{controller}/{id}",
                 new { id = RouteParameter.Optional });
